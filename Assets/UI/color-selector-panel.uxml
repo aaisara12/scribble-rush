@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:Template name="color-selector-option" src="project://database/Assets/UI/color-selector-option.uxml?fileID=9197481963319205126&amp;guid=c0f92d4d519dccd419e36244df6fd0f5&amp;type=3#color-selector-option" />
+    <Style src="project://database/Assets/UI/scribble-rush.uss?fileID=7433441132597879392&amp;guid=8823fc70c228a1649b3445196c2ef594&amp;type=3#scribble-rush" />
+    <ui:VisualElement style="width: 10%; margin-left: auto; height: 100%;">
+        <ui:GroupBox name="Colors">
+            <ui:Instance template="color-selector-option" name="color-selector-option" />
+            <ui:Instance template="color-selector-option" name="color-selector-option" />
+            <ui:Instance template="color-selector-option" name="color-selector-option" />
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>
