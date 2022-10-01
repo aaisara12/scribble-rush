@@ -1,17 +1,34 @@
 .color-radio-selector {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 80px;
+    height: 80px;
 }
 
 .color-radio-selector .unity-radio-button__checkmark-background {
-    color: rgb(255, 0, 0);
     -unity-font-style: normal;
     font-size: 35px;
-    background-color: rgba(250, 0, 0, 255);
     width: 100%;
-    height: 58px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-left-color: rgba(154, 154, 154, 0.39);
+    border-right-color: rgba(154, 154, 154, 0.39);
+    border-top-color: rgba(154, 154, 154, 0.39);
+    border-bottom-color: rgba(154, 154, 154, 0.39);
+    background-color: rgba(255, 0, 0, 0);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
@@ -20,8 +37,6 @@
 
 .color-radio-selector .unity-radio-button__checkmark {
     background-color: rgba(0, 255, 21, 0);
-    width: 100%;
-    height: 100%;
     border-left-color: rgba(0, 0, 0, 0.27);
     border-right-color: rgba(0, 0, 0, 0.27);
     border-top-color: rgba(0, 0, 0, 0.27);
@@ -30,4 +45,10 @@
     border-right-width: 4px;
     border-top-width: 4px;
     border-bottom-width: 4px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    height: 100%;
 }

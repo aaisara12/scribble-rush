@@ -6,14 +6,14 @@ using UnityEngine.UIElements;
 public class ColorSelectPanelUI : MonoBehaviour
 {
     [SerializeField] UIDocument document;
+    [SerializeField] List<Color> colorPalette = new List<Color>();
     void Awake()
     {
         List<RadioButton> colorButtons = document.rootVisualElement.Query<RadioButton>("ColorSelector").ToList();
 
-        foreach(RadioButton button in colorButtons)
+        for(int i = 0; i < colorButtons.Count; i++)
         {
-            Debug.Log("HELLO");
-            button.RegisterCallback<ClickEvent>(ev => Debug.Log("I've been clicked! " + button.style.backgroundColor));
+            colorButtons[i].style.backgroundColor = colorPalette[i];
         }
     }
 }
