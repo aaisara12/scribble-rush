@@ -10,7 +10,7 @@ public class Test : MonoBehaviour
     {
         //GetComponent<StringChannelSender>().SendValue("Hello World!");
 
-        GetComponent<IntChannelSender>()?.SendValue(3);
+        GetComponent<VoidChannelSender>().SendValue();
     }
 
     public void SetColor(Color color)

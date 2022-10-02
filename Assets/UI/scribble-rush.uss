@@ -45,3 +45,16 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+
+.scribble-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 255);
+}
+
+.scribble-button:hover {
+    background-color: rgba(0, 0, 0, 0.18);
+}
+
+.scribble-button:active {
+    background-color: rgba(0, 0, 0, 0.39);
+}
