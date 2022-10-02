@@ -8,8 +8,7 @@ public class DatabaseHandler : MonoBehaviour
 {
     private Realm _realm;
     public GameModel _GameModel;
-    public string gamerTag;
-    public string prompt;
+
     const string REALM_APP_ID = "application-1-lerob";
 
 
@@ -41,6 +40,7 @@ public class DatabaseHandler : MonoBehaviour
 
 
     public List<GameModel> QueryDrawingsFromDB(){
+        //TODO: Limit query size
         List<GameModel> models = new List<GameModel>();
         var GameModels = _realm.All<GameModel>();
         foreach(GameModel model in GameModels){
