@@ -226,7 +226,7 @@
       "url": "https://packages.unity.com"
     },
     "io.realm.unity": {
-      "version": "file:C:/Users/Aidan/Desktop/io.realm.unity-10.15.1.tgz",
+      "version": "file:../Assets/Tarballs/io.realm.unity-10.15.1.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {}
