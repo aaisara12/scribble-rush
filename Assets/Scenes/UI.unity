@@ -372,7 +372,7 @@ MonoBehaviour:
   document: {fileID: 773611724}
   colorSelectedEventChannel: {fileID: 11400000, guid: 02e2acbdd7567ae458f811d4589a6c2e, type: 2}
   colorPalette:
-  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
   - {r: 0.8627451, g: 0.14901961, b: 0.49803922, a: 1}
   - {r: 0.39215687, g: 0.56078434, b: 1, a: 1}
   - {r: 1, g: 0.6901961, b: 0, a: 1}
