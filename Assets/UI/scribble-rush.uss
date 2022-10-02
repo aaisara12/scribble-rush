@@ -37,7 +37,11 @@
 
 .color-radio-selector .unity-radio-button__checkmark {
     background-color: rgba(195, 195, 195, 0);
-    width: 100%;
-    height: 100%;
-    background-image: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=7433338533053954386&guid=16e80796f4d8ee04bb92be477820b47b&type=3#check@2x');
+    width: 60%;
+    height: 60%;
+    background-image: url('project://database/Assets/UI/Checkmark.png?fileID=2800000&guid=abd576e664059db4f9c10f3b07bce57d&type=3#Checkmark');
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
