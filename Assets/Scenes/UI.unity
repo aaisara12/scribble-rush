@@ -319,6 +319,8 @@ GameObject:
   - component: {fileID: 773611725}
   - component: {fileID: 773611724}
   - component: {fileID: 773611726}
+  - component: {fileID: 773611727}
+  - component: {fileID: 773611728}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -378,6 +380,34 @@ MonoBehaviour:
   - {r: 1, g: 0.6901961, b: 0, a: 1}
   - {r: 0.99607843, g: 0.38039216, b: 0, a: 1}
   - {r: 0.47058824, g: 0.36862746, b: 0.9411765, a: 1}
+--- !u!114 &773611727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773611723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7658a829ec928c4b99684cd49b24dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  document: {fileID: 773611724}
+  timerUpdateEventChannel: {fileID: 11400000, guid: 58ab89e1b08ad4e46848168e79d5b0ab, type: 2}
+--- !u!114 &773611728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773611723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a34941c4db5b04eabe8a9928daf98a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  document: {fileID: 773611724}
+  promptUpdateEventChannel: {fileID: 11400000, guid: 6f74e170c06aa6d4988ccf6b9f7d25f4, type: 2}
 --- !u!1 &861726277
 GameObject:
   m_ObjectHideFlags: 0
