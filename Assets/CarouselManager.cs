@@ -38,7 +38,7 @@ public class CarouselManager : MonoBehaviour
     public void spinRight(){
         offSet--;
         for(int x=0;x<carouselElements.Count;x++){
-            int y = (x+offSet) % loadedGameModels.Count;
+            int y = (x+offSet);
             if(x+offSet<0){
                 y=loadedGameModels.Count-x+offSet;
             }

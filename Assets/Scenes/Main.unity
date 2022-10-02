@@ -458,7 +458,7 @@ MonoBehaviour:
   database: {fileID: 20105433}
   image: {fileID: 0}
   texture2D: {fileID: 2800000, guid: 9196549a332e3704e99a65c1235d4de1, type: 3}
-  brushSize: 3
+  brushSize: 5
   brushColor: {r: 1, g: 0, b: 0.8268976, a: 1}
 --- !u!114 &834717434
 MonoBehaviour:
