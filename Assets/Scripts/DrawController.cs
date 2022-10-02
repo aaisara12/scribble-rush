@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class DrawController : MonoBehaviour
 {
-    
+
+
+    public DatabaseHandler database;    
     public Image image;
     public Texture2D texture2D;
 
@@ -27,6 +29,7 @@ public class DrawController : MonoBehaviour
 
     void Start(){
         image=GetComponent<Image>();
+
     }
 
 
@@ -47,15 +50,30 @@ public class DrawController : MonoBehaviour
             localPointInRectangle.x += image.rectTransform.rect.width/2;
 
 
-
+            Debug.Log(texture2D.width);
             //Scale it into a 256x256 texture
             float scalingFactor = (texture2D.width/image.rectTransform.rect.width);
             localPointInRectangle *= scalingFactor;
 
+            Debug.Log(localPointInRectangle);
             DrawToTexture(localPointInRectangle);
             texture2D.Apply();
+        }
 
+        if(Input.GetMouseButtonDown(1)){
+            database.SaveDrawingToDB(new GameModel("","testPrompt",texture2D.EncodeToPNG()));
+            Debug.Log("Saved!");
+        }
 
+        if(Input.GetKeyDown(KeyCode.Space)){
+            Debug.Log("Attempted To Query");
+            List<GameModel> data = database.QueryDrawingsFromDB();
+            if(data.Count>=1){
+                Debug.Log("Found");
+                texture2D.LoadImage(data[0].imageData);
+                texture2D.Apply();
+            }
+  
         }
     }
 
