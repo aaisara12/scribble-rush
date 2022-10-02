@@ -70,7 +70,7 @@ public class DrawController : MonoBehaviour
             List<GameModel> data = database.QueryDrawingsFromDB();
             if(data.Count>=1){
                 Debug.Log("Found");
-                texture2D.LoadImage(data[0].imageData);
+                texture2D.LoadImage(data[data.Count-1].imageData);
                 texture2D.Apply();
             }
   
