@@ -349,6 +349,7 @@ GameObject:
   - component: {fileID: 773611726}
   - component: {fileID: 773611727}
   - component: {fileID: 773611728}
+  - component: {fileID: 773611729}
   m_Layer: 5
   m_Name: DrawingPanelUI
   m_TagString: Untagged
@@ -400,7 +401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   document: {fileID: 773611724}
-  colorSelectedEventChannel: {fileID: 11400000, guid: 02e2acbdd7567ae458f811d4589a6c2e, type: 2}
   colorPalette:
   - {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
   - {r: 0.8627451, g: 0.14901961, b: 0.49803922, a: 1}
@@ -408,6 +408,33 @@ MonoBehaviour:
   - {r: 1, g: 0.6901961, b: 0, a: 1}
   - {r: 0.99607843, g: 0.38039216, b: 0, a: 1}
   - {r: 0.47058824, g: 0.36862746, b: 0.9411765, a: 1}
+  OnColorSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 02e2acbdd7567ae458f811d4589a6c2e, type: 2}
+        m_TargetAssemblyTypeName: EventChannelSO`1[[UnityEngine.Color, UnityEngine
+        m_MethodName: RaiseEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 773611729}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudioCue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &773611727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +463,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   document: {fileID: 773611724}
   promptUpdateEventChannel: {fileID: 11400000, guid: 6f74e170c06aa6d4988ccf6b9f7d25f4, type: 2}
+--- !u!114 &773611729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773611723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f92f965dbe44449b252b814ddc7137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioCue: {fileID: 11400000, guid: 8d239329c03907f4d90b5161d4e295f7, type: 2}
+  _playOnStart: 0
+  _audioCueEventChannel: {fileID: 11400000, guid: d242a5d414dc1424d9591b8b9c224ecf, type: 2}
+  _audioConfiguration: {fileID: 11400000, guid: 6b42c99763682d64ba019b447d78be04, type: 2}
 --- !u!1 &802393843
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +545,9 @@ GameObject:
   m_Component:
   - component: {fileID: 843377577}
   - component: {fileID: 843377576}
+  - component: {fileID: 843377578}
+  - component: {fileID: 843377580}
+  - component: {fileID: 843377579}
   m_Layer: 5
   m_Name: FinishPanelUI
   m_TagString: Untagged
@@ -540,6 +586,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843377578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843377575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f479dfe582316f4baec571c034a5b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  document: {fileID: 843377576}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 843377579}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudioCue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnHover:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 843377580}
+        m_TargetAssemblyTypeName: AudioCue, Assembly-CSharp
+        m_MethodName: PlayAudioCue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &843377579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843377575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f92f965dbe44449b252b814ddc7137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioCue: {fileID: 11400000, guid: 991ffdc6470d1f04ab90b5a2a5d5361a, type: 2}
+  _playOnStart: 0
+  _audioCueEventChannel: {fileID: 11400000, guid: d242a5d414dc1424d9591b8b9c224ecf, type: 2}
+  _audioConfiguration: {fileID: 11400000, guid: 6b42c99763682d64ba019b447d78be04, type: 2}
+--- !u!114 &843377580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843377575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f92f965dbe44449b252b814ddc7137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioCue: {fileID: 11400000, guid: 0d848d480e0c0854c94866b787b9c66e, type: 2}
+  _playOnStart: 0
+  _audioCueEventChannel: {fileID: 11400000, guid: d242a5d414dc1424d9591b8b9c224ecf, type: 2}
+  _audioConfiguration: {fileID: 11400000, guid: 6b42c99763682d64ba019b447d78be04, type: 2}
 --- !u!1 &861726277
 GameObject:
   m_ObjectHideFlags: 0
