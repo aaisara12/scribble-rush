@@ -6,23 +6,23 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public void goToMainMenu(){
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("MainMenu");
     }
     public void quit(){
         Application.Quit();
     }
-    
+
     public void goToCarousel(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Carousel");
     }
 
     public void goToCredits(){
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Credits");
     }
 
     public void goToGame(){
-        SceneManager.LoadScene(0);
-        SceneManager.LoadScene(3,LoadSceneMode.Additive);
+        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("UI",LoadSceneMode.Additive);
     }
 
     public void openLink(string link){

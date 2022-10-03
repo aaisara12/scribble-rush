@@ -6,10 +6,9 @@ public class DrawController : MonoBehaviour
 {
 
 
-    public DatabaseHandler database;    
     public Image image;
     public Texture2D texture2D;
-
+    public bool canDraw=true;
 
     [Header("Brush Settings")]
     public int brushSize;
@@ -36,7 +35,7 @@ public class DrawController : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetMouseButton(0)){
+        if(Input.GetMouseButton(0) && canDraw){
             Vector2 localPoint = Input.mousePosition;
 
             //Figure out whether we are in the rectangle, and where we are in it 
@@ -60,21 +59,7 @@ public class DrawController : MonoBehaviour
             texture2D.Apply();
         }
 
-        if(Input.GetMouseButtonDown(1)){
-            database.SaveDrawingToDB(new GameModel("","testPrompt",texture2D.EncodeToPNG()));
-            Debug.Log("Saved!");
-        }
-
-        if(Input.GetKeyDown(KeyCode.Space)){
-            Debug.Log("Attempted To Query");
-            List<GameModel> data = database.QueryDrawingsFromDB();
-            if(data.Count>=1){
-                Debug.Log("Found");
-                texture2D.LoadImage(data[data.Count-1].imageData);
-                texture2D.Apply();
-            }
   
-        }
     }
 
     public void SetBrushColor(Color c){
