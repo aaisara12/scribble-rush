@@ -1110,6 +1110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptSender: {fileID: 621667107}
+  particles: {fileID: 0}
   finalPromptSender: {fileID: 1255580319}
   currentPrompt: 
   promptManager: {fileID: 1889062199}

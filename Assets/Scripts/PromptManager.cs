@@ -33,6 +33,16 @@ public class PromptManager : MonoBehaviour
     "strawberry",
     "primordial ooze ",
     "game dev",
+    "rock",
+    "boba",
+    "pizza",
+    "lamp",
+    "foot",
+    "hand",
+    "minion",
+    "moon",
+    "ramen",
+    "salmon",
     };
 
     public string[] adjectives = 
@@ -83,7 +93,9 @@ public class PromptManager : MonoBehaviour
     "dull",
     "selfish",
     "scary",
-    "rich"
+    "rich",
+    "flirtatious",
+    "shy",
     };
 
 

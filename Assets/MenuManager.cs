@@ -21,8 +21,9 @@ public class MenuManager : MonoBehaviour
     }
 
     public void goToGame(){
-        GameSceneLoader.LoadScene("Main");
+        GameSceneLoader.LoadScene("Instructions");
     }
+
 
     public void openLink(string link){
         Application.OpenURL(link);
