@@ -7,11 +7,15 @@ using UnityEngine.Events;
 
 public class GameInitializer : MonoBehaviour
 {
+    static bool isGameInitialized = false;
     [SerializeField] UnityEvent OnAudioReadied = new UnityEvent();
     
     void Awake()
     {
+        if(isGameInitialized) return;
+        
         SceneManager.LoadSceneAsync("Audio", LoadSceneMode.Additive).completed += PlayMusic;
+        isGameInitialized = true;
     }
 
     void PlayMusic(AsyncOperation obj)
