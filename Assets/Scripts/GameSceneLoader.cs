@@ -14,9 +14,15 @@ public static class GameSceneLoader
             SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             currentPrimarySceneName = sceneName;
         }
+
         if(currentPrimarySceneName == "")
             currentPrimarySceneName = SceneManager.GetActiveScene().name;
+        // if(currentPrimarySceneName == "Main")
+        //     SceneManager.UnloadSceneAsync("UI");
+
         SceneManager.UnloadSceneAsync(currentPrimarySceneName).completed += (p) => LoadNextScene();
+
+        
     }
 
 }

@@ -13,8 +13,9 @@ public class GameInitializer : MonoBehaviour
     void Awake()
     {
         if(isGameInitialized) return;
-        
+
         SceneManager.LoadSceneAsync("Audio", LoadSceneMode.Additive).completed += PlayMusic;
+        SceneManager.LoadSceneAsync("UI", LoadSceneMode.Additive);
         isGameInitialized = true;
     }
 

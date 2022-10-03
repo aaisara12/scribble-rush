@@ -9,5 +9,6 @@ public class VoidEventChannelSO : ScriptableObject
     public void RaiseEvent()
     {
         OnEventRaised?.Invoke();
+        Debug.Log("VOID EVENT CALLED FOR " + name);
     }
 }

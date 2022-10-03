@@ -22,7 +22,6 @@ public class MenuManager : MonoBehaviour
 
     public void goToGame(){
         GameSceneLoader.LoadScene("Main");
-        SceneManager.LoadScene("UI",LoadSceneMode.Additive);
     }
 
     public void openLink(string link){

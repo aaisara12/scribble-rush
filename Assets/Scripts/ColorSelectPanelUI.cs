@@ -9,9 +9,11 @@ public class ColorSelectPanelUI : MonoBehaviour
     [SerializeField] UIDocument document;
     [SerializeField] List<Color> colorPalette = new List<Color>();
     [SerializeField] UnityEvent<Color> OnColorSelected = new UnityEvent<Color>();
+
+    List<RadioButton> colorButtons;
     void Awake()
     {
-        List<RadioButton> colorButtons = document.rootVisualElement.Query<RadioButton>("ColorSelector").ToList();
+        colorButtons = document.rootVisualElement.Query<RadioButton>("ColorSelector").ToList();
 
         for(int i = 0; i < colorButtons.Count; i++)
         {
@@ -19,6 +21,16 @@ public class ColorSelectPanelUI : MonoBehaviour
             Color thisColor = colorPalette[i];
             colorButtons[i].RegisterCallback<ClickEvent>(ev => OnColorSelected?.Invoke(thisColor));
         }
+
+        ResetSelection();
+    }
+
+    public void ResetSelection()
+    {
+        colorButtons.ForEach((b) => b.value = false);
+        OnColorSelected?.Invoke(colorPalette[0]);
+        colorButtons[0].value = true;
+        
     }
 
     
