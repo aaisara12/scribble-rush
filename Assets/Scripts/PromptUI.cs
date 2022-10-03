@@ -8,6 +8,7 @@ public class PromptUI : MonoBehaviour
 {
     [SerializeField] UIDocument document;
     [SerializeField] StringEventChannelSO promptUpdateEventChannel;
+    [SerializeField] AudioCue promptUpdateAudioCue;
 
     Label promptLabel;
 
@@ -29,6 +30,7 @@ public class PromptUI : MonoBehaviour
     void UpdatePrompt(string newPrompt)
     {
         promptLabel.text = newPrompt;
+        promptUpdateAudioCue?.PlayAudioCue();
     }
 
 
