@@ -593,6 +593,7 @@ GameObject:
   - component: {fileID: 843377580}
   - component: {fileID: 843377579}
   - component: {fileID: 843377581}
+  - component: {fileID: 843377582}
   m_Layer: 5
   m_Name: FinishPanelUI
   m_TagString: Untagged
@@ -720,6 +721,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   document: {fileID: 843377576}
   promptUpdateEventChannel: {fileID: 11400000, guid: 6f74e170c06aa6d4988ccf6b9f7d25f4, type: 2}
+--- !u!114 &843377582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843377575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c018d5b114ba84eae7f9dcef2d6666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  document: {fileID: 843377576}
 --- !u!1 &861726277
 GameObject:
   m_ObjectHideFlags: 0
