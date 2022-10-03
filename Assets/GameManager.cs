@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
 
     public StringChannelSender promptSender;
+    public StringChannelSender finalPromptSender;
     public string currentPrompt;
     public PromptManager promptManager;
     public VoidChannelSender transitionSender;
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
             //transition to the final
             database.SaveDrawingToDB(justCompleted);
             transitionSender.SendValue();
+            finalPromptSender.SendValue(currentPrompt);
         }
         else{
             //reset the timer

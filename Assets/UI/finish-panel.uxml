@@ -13,7 +13,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="footer" style="height: 20%;">
-            <ui:Label text="a cool dog riding a bike" display-tooltip-when-elided="true" name="title" style="margin-left: auto; margin-right: auto; -unity-font-definition: url(&apos;project://database/Assets/Fonts/GloriaHallelujah-Regular%20SDF_NEW.asset?fileID=11400000&amp;guid=f4563e3ef4547b8418344eb2c449b54b&amp;type=2#GloriaHallelujah-Regular SDF_NEW&apos;); color: rgb(0, 0, 0); font-size: 28px; -unity-font-style: bold-and-italic; bottom: 32px;" />
+            <ui:Label text="a cool dog riding a bike" display-tooltip-when-elided="true" name="prompt" style="margin-left: auto; margin-right: auto; -unity-font-definition: url(&apos;project://database/Assets/Fonts/GloriaHallelujah-Regular%20SDF_NEW.asset?fileID=11400000&amp;guid=f4563e3ef4547b8418344eb2c449b54b&amp;type=2#GloriaHallelujah-Regular SDF_NEW&apos;); color: rgb(0, 0, 0); font-size: 28px; -unity-font-style: bold-and-italic; bottom: 32px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   document: {fileID: 773611724}
-  promptUpdateEventChannel: {fileID: 11400000, guid: 6f74e170c06aa6d4988ccf6b9f7d25f4, type: 2}
+  promptUpdateEventChannel: {fileID: 11400000, guid: bf44e6904c31f0943a6a4360228aefea, type: 2}
 --- !u!114 &773611729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 843377578}
   - component: {fileID: 843377580}
   - component: {fileID: 843377579}
+  - component: {fileID: 843377581}
   m_Layer: 5
   m_Name: FinishPanelUI
   m_TagString: Untagged
@@ -661,6 +662,20 @@ MonoBehaviour:
   _playOnStart: 0
   _audioCueEventChannel: {fileID: 11400000, guid: d242a5d414dc1424d9591b8b9c224ecf, type: 2}
   _audioConfiguration: {fileID: 11400000, guid: 6b42c99763682d64ba019b447d78be04, type: 2}
+--- !u!114 &843377581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843377575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a34941c4db5b04eabe8a9928daf98a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  document: {fileID: 773611724}
+  promptUpdateEventChannel: {fileID: 11400000, guid: 6f74e170c06aa6d4988ccf6b9f7d25f4, type: 2}
 --- !u!1 &861726277
 GameObject:
   m_ObjectHideFlags: 0
