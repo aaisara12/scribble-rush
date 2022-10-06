@@ -43,10 +43,12 @@ public class DatabaseHandler : MonoBehaviour
         //TODO: Limit query size
         List<GameModel> models = new List<GameModel>();
         var GameModels = _realm.All<GameModel>();
+        int count=0;
         foreach(GameModel model in GameModels){
             models.Add(model);
-            Debug.Log($"Model:{model.gamerTag},{model.prompt}");
+            count++;
         }
+        Debug.LogWarning($"There are a total of {count} drawings that are loaded");
         return models;
     }
 
