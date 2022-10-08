@@ -14,20 +14,38 @@ public class DrawController : MonoBehaviour
     public int brushSize;
     public Color brushColor;
 
+    public List<Vector2> pixelLocations;
+
 
     void DrawToTexture(Vector2 pixelLocation){
         for(int x=0;x<brushSize;x++){
             for(int y=0;y<brushSize;y++){
                 if(x<texture2D.width && y<texture2D.width){
-                    texture2D.SetPixel((int)pixelLocation.x+x,(int)pixelLocation.y+y,brushColor);
+                    texture2D.SetPixel(Mathf.RoundToInt(pixelLocation.x+x),Mathf.RoundToInt(pixelLocation.y+y),brushColor);
                 }
             }
         }
+
+
         texture2D.Apply();
     }
 
+    void InterpolateLastPoint(){
+        //interpolate between the last two points that were drawn
+        if(pixelLocations.Count>2){
+            Debug.LogWarning("Interpolation!");
+            Vector2 lastPoint = pixelLocations[pixelLocations.Count-1];
+            Vector2 secondToLastPoint = pixelLocations[pixelLocations.Count-2];
+            //10 interpolations per two dots
+            for(float t=0;t<1;t+=0.1f){
+                DrawToTexture(Vector2.Lerp(secondToLastPoint,lastPoint,t));
+            }
+        }
+
+    }
     void Start(){
         image=GetComponent<Image>();
+        pixelLocations = new List<Vector2>();
 
     }
 
@@ -55,8 +73,17 @@ public class DrawController : MonoBehaviour
             localPointInRectangle *= scalingFactor;
 
             Debug.Log(localPointInRectangle);
+
             DrawToTexture(localPointInRectangle);
+            pixelLocations.Add(localPointInRectangle);
+            InterpolateLastPoint();
+
             texture2D.Apply();
+        }
+
+
+        if(Input.GetMouseButtonUp(0)){
+            pixelLocations.Clear();
         }
 
   
@@ -74,6 +101,7 @@ public class DrawController : MonoBehaviour
             for(int y=0;y<texture2D.height;y++)
                 texture2D.SetPixel(x,y,Color.white);
         texture2D.Apply();
+        pixelLocations.Clear();
 
     }
 
