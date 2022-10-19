@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public void goToCarousel(){
-        GameSceneLoader.LoadScene("Carousel");
+        GameSceneLoader.LoadScene("ScrollGallery");
     }
 
     public void goToCredits(){

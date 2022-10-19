@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: 08da4a3a9341cec46ace4361e4c911e9
+  - enabled: 1
+    path: Assets/Scenes/ScrollGallery.unity
+    guid: c5344019edd0fe243aeae342763706f2
   m_configObjects: {}
